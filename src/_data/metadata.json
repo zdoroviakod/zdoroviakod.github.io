@@ -1,0 +1,29 @@
+{
+    "author": "Алла Танаева",
+    "authorProfession": "Врач диетолог-нутрициолог",
+    "brandName": "ZdoroviaKod : «Код Здоровья» Аллы Танаевой", 
+    "email": "alt1976@mail.ru",
+    "whatsapp": "+79875481185",
+    "instagram": "https://www.instagram.com/zdoroviakod/",
+    "formSuccess": "Спасибо, я&nbsp;получила ваше сообщение и&nbsp;в&nbsp;ближайшее время вам отвечу",
+    "formError": "Произошла ошибка при&nbsp;отправке. Попробуйте снова, или&nbsp;свяжитесь со&nbsp;мной по&nbsp;телефону или через социальные сети",
+    "formApiAddres": "https://script.google.com/macros/s/AKfycbyDGUpNrSRpfrd-7By28MaM_pcJifkCBs7pgnZauonYLkp_msG1N-YdUA/exec",
+    "service": {
+        "bodyFit": {
+            "name": "Стройность без ограничений",
+            "icon": "img/icon-body-fit.svg"
+        },
+        "bodyLove": {
+            "name": "Психология любви к&nbsp;своему телу",
+            "icon": "img/icon-body-love.svg"
+        },
+        "foodFit": {
+            "name": "Коррекция пищевого поведения",
+            "icon": "img/icon-food-fit.svg"
+        },
+        "foodLove": {
+            "name": "Интуитивное питание",
+            "icon": "img/icon-food-love.svg"
+        }
+    }
+}

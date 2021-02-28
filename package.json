@@ -1,0 +1,40 @@
+{
+    "name": "tanna-dev",
+    "version": "1.0.0",
+    "description": "tanaeva website",
+    "main": "index.js",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "watch:sass": "sass --watch src/scss:_site/css",
+        "build:sass": "sass --no-source-map src/scss:_site/css --style=compressed",
+        "build-local:sass": "sass src/scss:_site/css",
+        "watch:eleventy": "eleventy --serve",
+        "build:eleventy": "eleventy",
+        "start": "npm-run-all build-local:sass --parallel watch:*",
+        "build": "npm-run-all build:*"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tanna-dev/tanna-dev.github.io.git"
+    },
+    "author": "Marina Salnikova",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/tanna-dev/tanna-dev.github.io/issues"
+    },
+    "homepage": "https://github.com/tanna-dev/tanna-dev.github.io#readme",
+    "devDependencies": {
+        "@11ty/eleventy": "^0.11.1",
+        "@11ty/eleventy-img": "^0.3.0",
+        "@creativebulma/bulma-divider": "^1.1.0",
+        "bulma": "^0.9.1",
+        "eslint": "^7.10.0",
+        "html-minifier": "^4.0.0",
+        "markdown-it": "^8.4.2",
+        "npm-run-all": "^4.1.5",
+        "sass": "^1.27.0",
+        "stylelint-config-standard": "^20.0.0"
+    }
+}

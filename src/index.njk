@@ -1,0 +1,222 @@
+---
+layout: layouts/base.njk
+title: Hello
+description: My first webpage.
+bodyClass: home
+---
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <img src="/img/zdoroviakod-min.svg" alt="{{ metadata.brandName}}" />
+    </div>
+    <ul class="navbar-menu">
+        <li>
+            <a href="#consultancy" class="navbar-item">Консультации</a>
+        </li>
+        <li>
+            <a href="#contacts" class="navbar-item">Контакты</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="banner">
+    <section class="hero is-large has-bg-img">
+        <div class="hero-body">
+            <p class="title">
+            {{ metadata.author }}
+            </p>
+            <p class="subtitle">
+            {{ metadata.authorProfession }}
+            </p>
+            <ul>
+                <li><span><img src="{{ metadata.service.bodyFit.icon | url }}" /></span> {{ metadata.service.bodyFit.name | safe }} </li>
+                <li><span><img src="{{ metadata.service.foodLove.icon | url }}" /></span> {{ metadata.service.foodLove.name | safe }} </li>
+                <li><span><img src="{{ metadata.service.bodyLove.icon | url }}" /></span> {{ metadata.service.bodyLove.name | safe }} </li>
+                <li><span><img src="{{ metadata.service.foodFit.icon | url }}" /></span> {{ metadata.service.foodFit.name | safe }} </li>
+            </ul>
+            <div class="hero-image">
+                <img src="{{ '/img/hero.png' | url }}" />
+            </div>
+        </div>
+    </section>
+</div>
+<section class="services">
+    <h1 id="consultancy">Консультации</h1>
+    <div class="columns is-multiline">
+        <div class="columns column is-full-tablet is-half-desktop">
+            <div class="column">
+                {% set tplTitle = (metadata.service.bodyFit.name | safe) %}
+                {% set tplImg = (metadata.service.bodyFit.icon | url) %}
+                {% set tplContent = "" %}
+                {% include "serviceitem.njk" %}
+            </div>
+            <div class="column">
+                {% set tplTitle = (metadata.service.foodLove.name | safe) %}
+                {% set tplImg = (metadata.service.foodLove.icon | url) %}
+                {% set tplContent = "" %}
+                {% include "serviceitem.njk" %}
+            </div>
+        </div>
+        <div class="columns column is-full-tablet is-half-desktop">
+            <div class="column">
+                {% set tplTitle = (metadata.service.bodyLove.name | safe) %}
+                {% set tplImg = (metadata.service.bodyLove.icon | url) %}
+                {% set tplContent = " " %}
+                {% include "serviceitem.njk" %}
+            </div>
+            <div class="column">
+                {% set tplTitle = (metadata.service.foodFit.name | safe) %}
+                {% set tplImg = (metadata.service.foodFit.icon | url) %}
+                {% set tplContent = "" %}
+                {% include "serviceitem.njk" %}
+            </div>
+        </div>
+    </div>
+</section>
+<section class="me">
+    <h1>{{ metadata.author }}</h1>
+    <div>
+<p>Врачебный стаж 21&nbsp;год</p>
+<p>Работала в&nbsp;области экстренной медицины, педиатрии, инфекционных болезней, гастроэнтерологи, международных медицинских исследований в&nbsp;направлении &laquo;Сахарный диабет&raquo;</p>
+<p>Практика по&nbsp;диетологии и&nbsp;нутрициологии 4&nbsp;года</p>
+    </div>
+    <div>
+<p>Ведёт индивидуальные <strong>сопровождения по&nbsp;питанию с&nbsp;коррекцией</strong> рациона (снижение веса, поддержка, набор веса), индивидуальный подбор физической нагрузки с&nbsp;учетом состояния здоровья, анализом пищевого дневника, разбором положительных и&nbsp;отрицательных сторон в&nbsp;питании клиента, с&nbsp;последующей коррекцией, советы по&nbsp;рациональному и&nbsp;сбалансированному питанию, простая система изменения пищевых привычек без&nbsp;ограничений и&nbsp;стресса, с&nbsp;учетом индивидуальных вкусовых предпочтений и&nbsp;образа жизни.</p>
+    </div>
+    <div>
+<p>Авторская методика&nbsp;&mdash; индивидуальный коучинг по&nbsp;здоровому питанию &laquo;<strong>Стройность без&nbsp;ограничений за&nbsp;6 недель</strong>&raquo;, марафон стройности &laquo;Попробуй просто&raquo;.</p>
+<p>В&nbsp;основе методики:</p>
+<ol>
+<li>Психология любви к&nbsp;своему телу</li>
+<li>Коррекция пищевого поведения</li>
+<li>Интуитивное питание</li>
+</ol>
+    </div>
+    <div class="clients">
+<p>Более 1000 довольных клиентов</p>
+    </div>
+    <div class="slogan">
+<p><strong>Стройность без ограничений</strong>!</p>
+    </div>
+</section>
+<section class="contacts">
+    <h1 id="contacts">Контакты</h1>
+    <div class="columns">
+        <section class="links-container column">
+            <div class="links">
+                <h2>Напишите мне через социальные медиа</h2>
+                <div class="link-item">
+                    <a href="https://instagram.com/zdoroviakod" class="button">
+                        <span class="icon is-small">
+                            <img alt="Инстаграм https://instagram.com/zdoroviakod" src="/img/icon_instagram.svg">
+                        </span>
+                        <span>
+                        Инстаграм instagram.com/<strong>zdoroviakod</strong>
+                        </span>
+                        <span>
+                            &rarr;
+                        </span>
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a href="https://wa.me/79875481185" class="button">
+                        <span class="icon is-small">
+                            <img alt="Ватсапп +79875481185" src="/img/icon_whatsapp.svg">
+                        </span>
+                        <span>
+                        Ватсапп <strong>+7&nbsp;987&nbsp;548&nbsp;11&nbsp;85</strong>
+                        </span>
+                        <span>
+                            &rarr;
+                        </span>
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a href="https://www.facebook.com/alla.tanaeva" class="button">
+                        <span class="icon is-small">
+                            <img alt="Ватсапп +79875481185" src="/img/icon_facebook.svg">
+                        </span>
+                        <span>
+                        Фейсбук facebook.com/alla.tanaeva
+                        </span>
+                        <span>
+                            &rarr;
+                        </span>
+                    </a>
+                </div>
+                <h2> Напишите мне письмо </h2>
+                <div class="link-item">
+                    <a href="mailto:zdoroviakod@gmail.com" class="button email">
+                        <span class="icon is-small">
+                            <img alt="Электроная почта zdoroviakod@gmail.com" src="/img/icon_email.svg">
+                        </span>
+                        <span>
+                        Почта <strong>zdoroviakod@gmail.com</strong>
+                        </span>
+                        <span>
+                            &rarr;
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <div class="divider is-vertical">или</div>
+        <section class="contact-form column">
+            <h2>Отправьте мне сообщение</h2>
+            <p id="contact-form-output"></p>
+            <form id="contact-form">
+                <fieldset class="field">
+                    <label class="label" for="name"> Ваше имя </label>
+                    <input
+                        id="name"
+                        type="text"
+                        name="name"
+                        placeholder="Ваше имя"
+                        class="input"
+                    />
+                </fieldset>
+                <fieldset id="media" class="field">
+                    <label class="label" for="media">
+                        Как с&nbsp;вами связаться,
+                    </label>
+                    <label class="label" for="email">
+                        по&nbsp;электронной почте
+                    </label>
+                    <input
+                        id="email"
+                        type="text"
+                        name="email"
+                        placeholder="Ваша электронная почта"
+                        class="input"
+                    />
+                    <label class="label" for="phone">
+                        или по&nbsp;телефону
+                    </label>
+                    <input
+                        id="phone"
+                        type="text"
+                        name="phone"
+                        placeholder="Ваш телефон"
+                        class="input"
+                    />
+                </fieldset>
+                <fieldset class="field">
+                    <label class="label" for="message">
+                        Дополнительная информация по&nbsp;желанию
+                    </label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Дополнительная информация"
+                        class="textarea"
+                    ></textarea>
+                </fieldset>
+                <div class="field">
+                    <button type="submit" class="button is-primary">
+                        Отправить
+                    </button>
+                </div>
+            </form>
+        </section>
+    </div>
+</section>
