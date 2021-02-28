@@ -1,7 +1,7 @@
 {
-    "name": "tanna-dev",
+    "name": "zdoroviakod",
     "version": "1.0.0",
-    "description": "tanaeva website",
+    "description": "zdoroviakod",
     "main": "index.js",
     "directories": {
         "test": "test"
@@ -17,14 +17,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/tanna-dev/tanna-dev.github.io.git"
+        "url": "git+https://github.com/zdoroviakod/zdoroviakod.github.io.git"
     },
     "author": "Marina Salnikova",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/tanna-dev/tanna-dev.github.io/issues"
+        "url": "https://github.com/zdoroviakod/zdoroviakod.github.io/issues"
     },
-    "homepage": "https://github.com/tanna-dev/tanna-dev.github.io#readme",
+    "homepage": "https://github.com/zdoroviakod/zdoroviakod.github.io#readme",
     "devDependencies": {
         "@11ty/eleventy": "^0.11.1",
         "@11ty/eleventy-img": "^0.3.0",
