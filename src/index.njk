@@ -43,7 +43,8 @@ bodyClass: home
 <section class="services">
     <h1 id="consultancy">Консультации</h1>
     <div class="columns is-multiline">
-        <div class="columns column is-full-tablet is-half-desktop">
+        <div class="column is-full-tablet is-half-desktop">
+            <div class="columns">
             <div class="column">
                 {% set tplTitle = (metadata.service.bodyFit.name | safe) %}
                 {% set tplImg = (metadata.service.bodyFit.icon | url) %}
@@ -56,8 +57,10 @@ bodyClass: home
                 {% set tplContent = "" %}
                 {% include "serviceitem.njk" %}
             </div>
+            </div>
         </div>
-        <div class="columns column is-full-tablet is-half-desktop">
+        <div class="column is-full-tablet is-half-desktop">
+            <div class="columns">
             <div class="column">
                 {% set tplTitle = (metadata.service.bodyLove.name | safe) %}
                 {% set tplImg = (metadata.service.bodyLove.icon | url) %}
@@ -69,6 +72,7 @@ bodyClass: home
                 {% set tplImg = (metadata.service.foodFit.icon | url) %}
                 {% set tplContent = "" %}
                 {% include "serviceitem.njk" %}
+            </div>
             </div>
         </div>
     </div>

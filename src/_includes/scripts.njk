@@ -1,8 +1,12 @@
 
 <script>
-    var successMsg='{{ metadata.formSuccess | safe }}';var errorMsg='{{ metadata.formError | safe }}';var apiUrl='{{ metadata.formApiAddres | safe }}';var formOut=$('#contact-form-output');
-$('#contact-form').on('submit', function (e) {
-    // validation code here
-    e.preventDefault(),formOut.html("");var form=$(this);var data=form.serializeArray().reduce((t,r)=>({...t,[r.name]:r.value}),{});$.ajax({url:apiUrl,method:"POST",dataType:"json",data:data,success:function(t){if("success"==t.result)return form[0].reset(),formOut.html(successMsg),!0;formOut.html(errorMsg+"<br /> result:"+JSON.stringify(t))},error:function(t){formOut.html(errorMsg+"<br /> error:"+JSON.stringify(t))}});        
+var successMsg='{{ metadata.contactForm.success | safe }}';var errorMsg='{{ metadata.contactForm.error | safe }}';var apiUrl='{{ metadata.contactForm.apiAddres | safe }}';var form=$('#contact-form');var formOut=$('#contact-form-output');
+$.validator.addMethod('mailOrPhone',function(v,e){return $('#email').val().trim().length > 0 || $('#phone').val().trim().length > 0});
+form.validate({
+rules: { name: {required:true}, email: {email:true}, phone: {mailOrPhone:true} },
+messages: { name: {required:'{{metadata.contactForm.valName}}'}, email: {email:'{{metadata.contactForm.valEmail}}'}, phone: {mailOrPhone: '{{metadata.contactForm.valPhoneOrEmail}}'} },
+submitHandler: ()=>{
+formOut.html("");var data=form.serializeArray().reduce((t,r)=>({...t,[r.name]:r.value}),{});$.ajax({url:apiUrl,method:"POST",dataType:"json",data:data,success:function(t){if("success"==t.result)return form[0].reset(),formOut.html(successMsg),!0;formOut.html(errorMsg+"<br /> result:"+JSON.stringify(t))},error:function(t){formOut.html(errorMsg+"<br /> error:"+JSON.stringify(t))}});
+}
 });
 </script>

@@ -8,6 +8,7 @@ $wheelE: #b84639; /* hsb(006, 069, 072); */
 
 $wheelC-darkest: #3e4242; /* hsb(182, 007, 026); */
 $wheelC-lightest: #daeaeb; /* hsb(182, 007, 092); */
+$wheelE-lightest: #ffefef;
 
 // Update Bulma's global variables
 $family-sans-serif: 'Raleway', sans-serif;
@@ -57,6 +58,11 @@ body {
 
         & > section {
             margin: 2rem 0;
+            padding: 0 1rem;
+
+            @media screen and (min-width: $desktop) {
+                padding: 0 2rem;
+            }
 
             h1 {
                 text-align: center;
@@ -76,6 +82,10 @@ h6 {
     // color: $wheelE;
 }
 
+ol {
+    padding-left: 1.5rem;
+}
+
 /* LOGO */
 nav.navbar {
     display: flex;
@@ -84,6 +94,10 @@ nav.navbar {
     align-items: center;
     flex-wrap: wrap;
     padding: 0.25rem 1rem;
+
+    @media screen and (min-width: $desktop) {
+        padding: 0.25rem 2rem;
+    }
 
     .navbar-brand img {
         height: 3rem;
@@ -111,6 +125,17 @@ nav.navbar {
 /* FORMS */
 fieldset.field {
     margin-bottom: 1rem;
+}
+input:focus.error {
+    border-color: $wheelE;
+}
+label.error {
+    display: block;
+    padding: 0.25em;
+    color: $wheelE;
+    background-color: #ffefef;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
 }
 
 /* LINKS */
