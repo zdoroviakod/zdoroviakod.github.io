@@ -4,14 +4,6 @@ on:
   push:
     branches:
       - master
-  workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Log level'     
-        required: true
-        default: 'warning'
-      tags:
-        description: 'Test scenario tags' 
 
 jobs:
   build:
@@ -19,7 +11,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [15.x]
+        node-version: [12.x]
 
     steps:
       - uses: actions/checkout@v2
@@ -33,6 +25,7 @@ jobs:
         run: |
           npm i
           npm run build          
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
