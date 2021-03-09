@@ -7,6 +7,12 @@
     <meta name="description" content="{{ description or metadata.brandDescription }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
+    <meta property="og:url" content="{{ page.url }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ brandDescription }}"/>
+    <meta property="og:image" content="{{ metadata.site_uri + '/img/site_image.png' | url }}"/>
+    <meta name="twitter:card" content="summary_large_image">
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,600;1,300&display=swap" rel="stylesheet">
 
