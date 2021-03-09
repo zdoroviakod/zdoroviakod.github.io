@@ -9,7 +9,8 @@
 
     <meta property="og:url" content="{{ page.url }}">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="{{ brandDescription }}"/>
+    <meta property="og:title" content="{{ title or metadata.brandName }}"/>
+    <meta property="og:description" content="{{ metadata.brandDescription }}"/>
     <meta property="og:image" content="{{ metadata.site_uri + '/img/site_image.png' | url }}"/>
     <meta name="twitter:card" content="summary_large_image">
 
