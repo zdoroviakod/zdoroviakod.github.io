@@ -1,0 +1,14 @@
+/* LINKS */
+.link-item {
+    margin-bottom: 1rem;
+
+    a.button {
+        span:first-child:not(:last-child) {
+            margin-right: 0.5em;
+        }
+
+        span:last-child {
+            margin-left: 1em;
+        }
+    }
+}

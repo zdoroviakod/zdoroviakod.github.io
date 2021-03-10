@@ -1,13 +1,16 @@
 ---
 layout: layouts/base.njk
-title: 
-description: 
+title:
+description:
 bodyClass: home
 ---
 
 <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-        <img src="{{'/img/zdoroviakod-min.svg' | url}}" alt="{{ metadata.brandName}}" />
+        <img
+            src="{{ '/img/zdoroviakod-min.svg' | url }}"
+            alt="{{ metadata.brandName }}"
+        />
     </div>
     <ul class="navbar-menu">
         <li>
@@ -23,16 +26,36 @@ bodyClass: home
     <section class="hero is-large has-bg-img">
         <div class="hero-body">
             <p class="title">
-            {{ metadata.author }}
+                {{ metadata.author }}
             </p>
             <p class="subtitle">
-            {{ metadata.authorProfession }}
+                {{ metadata.authorProfession }}
             </p>
             <ul>
-                <li><span><img src="{{ metadata.service.bodyFit.icon | url }}" /></span> {{ metadata.service.bodyFit.name | safe }} </li>
-                <li><span><img src="{{ metadata.service.foodLove.icon | url }}" /></span> {{ metadata.service.foodLove.name | safe }} </li>
-                <li><span><img src="{{ metadata.service.bodyLove.icon | url }}" /></span> {{ metadata.service.bodyLove.name | safe }} </li>
-                <li><span><img src="{{ metadata.service.foodFit.icon | url }}" /></span> {{ metadata.service.foodFit.name | safe }} </li>
+                <li>
+                    <span
+                        ><img src="{{ metadata.service.bodyFit.icon | url }}"
+                    /></span>
+                    {{ metadata.service.bodyFit.name | safe }}
+                </li>
+                <li>
+                    <span
+                        ><img src="{{ metadata.service.foodLove.icon | url }}"
+                    /></span>
+                    {{ metadata.service.foodLove.name | safe }}
+                </li>
+                <li>
+                    <span
+                        ><img src="{{ metadata.service.bodyLove.icon | url }}"
+                    /></span>
+                    {{ metadata.service.bodyLove.name | safe }}
+                </li>
+                <li>
+                    <span
+                        ><img src="{{ metadata.service.foodFit.icon | url }}"
+                    /></span>
+                    {{ metadata.service.foodFit.name | safe }}
+                </li>
             </ul>
             <div class="hero-image">
                 <img src="{{ '/img/hero.png' | url }}" />
@@ -42,38 +65,26 @@ bodyClass: home
 </div>
 <section class="services">
     <h1 id="consultancy">Консультации</h1>
-    <div class="columns is-multiline">
-        <div class="column is-full-tablet is-half-desktop">
-            <div class="columns">
-            <div class="column">
-                {% set tplTitle = (metadata.service.bodyFit.name | safe) %}
-                {% set tplImg = (metadata.service.bodyFit.icon | url) %}
-                {% set tplContent = "" %}
-                {% include "serviceitem.njk" %}
-            </div>
-            <div class="column">
-                {% set tplTitle = (metadata.service.foodLove.name | safe) %}
-                {% set tplImg = (metadata.service.foodLove.icon | url) %}
-                {% set tplContent = "" %}
-                {% include "serviceitem.njk" %}
-            </div>
-            </div>
+    <div>
+        <div>
+            {% set tplTitle = metadata.service.bodyFit.name %} {% set
+            tplImg = (metadata.service.bodyFit.icon | url) %} {% set tplContent
+            = metadata.service.bodyFit.content  %} {% include "serviceitem.njk" %}
         </div>
-        <div class="column is-full-tablet is-half-desktop">
-            <div class="columns">
-            <div class="column">
-                {% set tplTitle = (metadata.service.bodyLove.name | safe) %}
-                {% set tplImg = (metadata.service.bodyLove.icon | url) %}
-                {% set tplContent = " " %}
-                {% include "serviceitem.njk" %}
-            </div>
-            <div class="column">
-                {% set tplTitle = (metadata.service.foodFit.name | safe) %}
-                {% set tplImg = (metadata.service.foodFit.icon | url) %}
-                {% set tplContent = "" %}
-                {% include "serviceitem.njk" %}
-            </div>
-            </div>
+        <div>
+            {% set tplTitle = metadata.service.foodLove.name %} {% set
+            tplImg = (metadata.service.foodLove.icon | url) %} {% set tplContent
+            = metadata.service.foodLove.content %} {% include "serviceitem.njk" %}
+        </div>
+        <div>
+            {% set tplTitle = metadata.service.bodyLove.name %} {% set
+            tplImg = (metadata.service.bodyLove.icon | url) %} {% set tplContent
+            = metadata.service.bodyLove.content %} {% include "serviceitem.njk" %}
+        </div>
+        <div>
+            {% set tplTitle = metadata.service.foodFit.name %} {% set
+            tplImg = (metadata.service.foodFit.icon | url) %} {% set tplContent
+            = metadata.service.foodFit.content %} {% include "serviceitem.njk" %}
         </div>
     </div>
 </section>
@@ -81,31 +92,56 @@ bodyClass: home
     <h1>{{ metadata.author }}</h1>
     <div class="me-body">
         <div class="me-image">
-            <img src="{{'/img/photo/alla-002.png' | url}}" alt="{{ metadata.author }}" />
+            <img
+                src="{{ '/img/photo/alla-002.png' | url }}"
+                alt="{{ metadata.author }}"
+            />
         </div>
         <div class="me-title-1">
             <p>Врачебный стаж 21&nbsp;год</p>
-            <p>Работала в&nbsp;области экстренной медицины, педиатрии, инфекционных болезней, гастроэнтерологи, международных медицинских исследований в&nbsp;направлении &laquo;Сахарный диабет&raquo;</p>
+            <p>
+                Работала в&nbsp;области экстренной медицины, педиатрии,
+                инфекционных болезней, гастроэнтерологи, международных
+                медицинских исследований в&nbsp;направлении &laquo;Сахарный
+                диабет&raquo;
+            </p>
             <p>Практика по&nbsp;диетологии и&nbsp;нутрициологии 4&nbsp;года</p>
         </div>
         <div class="me-title-2">
-            <p>Ведёт индивидуальные <strong>сопровождения по&nbsp;питанию с&nbsp;коррекцией</strong> рациона (снижение веса, поддержка, набор веса), индивидуальный подбор физической нагрузки с&nbsp;учетом состояния здоровья, анализом пищевого дневника, разбором положительных и&nbsp;отрицательных сторон в&nbsp;питании клиента, с&nbsp;последующей коррекцией, советы по&nbsp;рациональному и&nbsp;сбалансированному питанию, простая система изменения пищевых привычек без&nbsp;ограничений и&nbsp;стресса, с&nbsp;учетом индивидуальных вкусовых предпочтений и&nbsp;образа жизни.</p>
+            <p>
+                Ведёт индивидуальные
+                <strong>сопровождения по&nbsp;питанию с&nbsp;коррекцией</strong>
+                рациона (снижение веса, поддержка, набор веса), индивидуальный
+                подбор физической нагрузки с&nbsp;учетом состояния здоровья,
+                анализом пищевого дневника, разбором положительных
+                и&nbsp;отрицательных сторон в&nbsp;питании клиента,
+                с&nbsp;последующей коррекцией, советы по&nbsp;рациональному
+                и&nbsp;сбалансированному питанию, простая система изменения
+                пищевых привычек без&nbsp;ограничений и&nbsp;стресса,
+                с&nbsp;учетом индивидуальных вкусовых предпочтений и&nbsp;образа
+                жизни.
+            </p>
         </div>
         <div class="me-title-3">
-            <p>Авторская методика&nbsp;&mdash; индивидуальный коучинг по&nbsp;здоровому питанию &laquo;<strong>Стройность без&nbsp;ограничений за&nbsp;6 недель</strong>&raquo;, марафон стройности &laquo;Попробуй просто&raquo;.</p>
+            <p>
+                Авторская методика&nbsp;&mdash; индивидуальный коучинг
+                по&nbsp;здоровому питанию &laquo;<strong
+                    >Стройность без&nbsp;ограничений за&nbsp;6 недель</strong
+                >&raquo;, марафон стройности &laquo;Попробуй просто&raquo;.
+            </p>
             <p>В&nbsp;основе методики:</p>
             <ol>
-            <li>Психология любви к&nbsp;своему телу</li>
-            <li>Коррекция пищевого поведения</li>
-            <li>Интуитивное питание</li>
+                <li>Психология любви к&nbsp;своему телу</li>
+                <li>Коррекция пищевого поведения</li>
+                <li>Интуитивное питание</li>
             </ol>
         </div>
     </div>
     <div class="clients">
-<p>Более 1000 довольных клиентов</p>
+        <p>Более 1000 довольных клиентов</p>
     </div>
     <div class="slogan">
-<p><strong>Стройность без ограничений</strong>!</p>
+        <p><strong>Стройность без ограничений</strong>!</p>
     </div>
 </section>
 <section class="contacts">
@@ -117,54 +153,62 @@ bodyClass: home
                 <div class="link-item">
                     <a href="https://instagram.com/zdoroviakod" class="button">
                         <span class="icon is-small">
-                            <img alt="Инстаграм https://instagram.com/zdoroviakod" src="/img/icon_instagram.svg">
+                            <img
+                                alt="Инстаграм https://instagram.com/zdoroviakod"
+                                src="/img/icon_instagram.svg"
+                            />
                         </span>
                         <span>
-                        Инстаграм instagram.com/<strong>zdoroviakod</strong>
+                            Инстаграм instagram.com/<strong>zdoroviakod</strong>
                         </span>
-                        <span>
-                            &rarr;
-                        </span>
+                        <span> &rarr; </span>
                     </a>
                 </div>
                 <div class="link-item">
                     <a href="https://wa.me/79875481185" class="button">
                         <span class="icon is-small">
-                            <img alt="Ватсапп +79875481185" src="/img/icon_whatsapp.svg">
+                            <img
+                                alt="Ватсапп +79875481185"
+                                src="/img/icon_whatsapp.svg"
+                            />
                         </span>
                         <span>
-                        Ватсапп <strong>+7&nbsp;987&nbsp;548&nbsp;11&nbsp;85</strong>
+                            Ватсапп
+                            <strong
+                                >+7&nbsp;987&nbsp;548&nbsp;11&nbsp;85</strong
+                            >
                         </span>
-                        <span>
-                            &rarr;
-                        </span>
+                        <span> &rarr; </span>
                     </a>
                 </div>
                 <div class="link-item">
-                    <a href="https://www.facebook.com/alla.tanaeva" class="button">
+                    <a
+                        href="https://www.facebook.com/alla.tanaeva"
+                        class="button"
+                    >
                         <span class="icon is-small">
-                            <img alt="Ватсапп +79875481185" src="/img/icon_facebook.svg">
+                            <img
+                                alt="Ватсапп +79875481185"
+                                src="/img/icon_facebook.svg"
+                            />
                         </span>
-                        <span>
-                        Фейсбук facebook.com/alla.tanaeva
-                        </span>
-                        <span>
-                            &rarr;
-                        </span>
+                        <span> Фейсбук facebook.com/alla.tanaeva </span>
+                        <span> &rarr; </span>
                     </a>
                 </div>
-                <h2> Напишите мне письмо </h2>
+                <h2>Напишите мне письмо</h2>
                 <div class="link-item">
                     <a href="mailto:zdoroviakod@gmail.com" class="button email">
                         <span class="icon is-small">
-                            <img alt="Электроная почта zdoroviakod@gmail.com" src="/img/icon_email.svg">
+                            <img
+                                alt="Электроная почта zdoroviakod@gmail.com"
+                                src="/img/icon_email.svg"
+                            />
                         </span>
                         <span>
-                        Почта <strong>zdoroviakod@gmail.com</strong>
+                            Почта <strong>zdoroviakod@gmail.com</strong>
                         </span>
-                        <span>
-                            &rarr;
-                        </span>
+                        <span> &rarr; </span>
                     </a>
                 </div>
             </div>

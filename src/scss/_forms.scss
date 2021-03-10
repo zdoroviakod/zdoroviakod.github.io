@@ -1,0 +1,15 @@
+/* FORMS */
+fieldset.field {
+    margin-bottom: 1rem;
+}
+input:focus.error {
+    border-color: $wheelE;
+}
+label.error {
+    display: block;
+    padding: 0.25em;
+    color: $wheelE;
+    background-color: #ffefef;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}

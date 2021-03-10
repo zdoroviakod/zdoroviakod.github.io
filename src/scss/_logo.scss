@@ -1,0 +1,35 @@
+/* LOGO */
+nav.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0.25rem 1rem;
+
+    @media screen and (min-width: $desktop) {
+        padding: 0.25rem 2rem;
+    }
+
+    .navbar-brand img {
+        height: 3rem;
+        width: auto;
+    }
+
+    ul.navbar-menu {
+        display: flex;
+
+        li:not(:last-child) {
+            margin-right: 1rem;
+        }
+
+        a:hover {
+            border-bottom: 2px solid $wheelD;
+        }
+    }
+
+    @media screen and (min-width: $tablet) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

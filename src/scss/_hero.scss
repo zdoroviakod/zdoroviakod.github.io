@@ -1,0 +1,113 @@
+/* HERO */
+.has-bg-img {
+    background-color: #d5e2e7;
+
+    .hero-body {
+        padding-top: 2rem !important;
+        padding-bottom: 0 !important;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content min-content 1fr min-content;
+        gap: 0px 0px;
+        grid-template-areas:
+            'title'
+            'subtitle'
+            'features'
+            'image';
+        text-align: center;
+
+        .title {
+            grid-area: title;
+            font-size: 3em;
+            line-height: 0.6em;
+        }
+        .subtitle {
+            grid-area: subtitle;
+            line-height: 1em;
+            margin-top: 0.5em;
+            font-size: 1.7em;
+            color: $wheelE;
+        }
+        ul {
+            grid-area: features;
+            list-style: none;
+            margin-top: 1em;
+            margin-bottom: 1em;
+
+            li {
+                &:nth-child(1) {
+                    & > span {
+                        color: #f24141;
+                    }
+                }
+
+                & > span {
+                    margin-right: 0.5em;
+
+                    img {
+                        height: 1em;
+                        width: auto;
+                    }
+                }
+            }
+        }
+
+        .hero-image {
+            display: flex;
+            flex-direction: column;
+            grid-area: image;
+
+            & > img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    @media screen and (min-width: $tablet) {
+        .hero-body {
+            padding-top: 0rem !important;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: min-content min-content 1fr;
+            grid-template-areas:
+                'title    image'
+                'subtitle image'
+                'features image';
+            text-align: left;
+
+            .title {
+                padding-top: 15%;
+                font-size: 3em;
+                line-height: 0.6em;
+            }
+            .subtitle {
+                font-size: 1.7em;
+            }
+            ul {
+                list-style: none;
+                margin-top: 1em;
+                font-size: 1.1em;
+            }
+            .hero-image {
+                padding-top: 1rem;
+            }
+        }
+    }
+
+    @media screen and (min-width: $desktop) {
+        .hero-body {
+            grid-template-columns: 3fr 2fr;
+
+            .title {
+                font-size: 4em;
+            }
+            .subtitle {
+                font-size: 1.9em;
+            }
+            ul {
+                margin-top: 2em;
+                font-size: 1.2em;
+            }
+        }
+    }
+}
