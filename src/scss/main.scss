@@ -225,7 +225,7 @@ label.error {
             grid-template-columns: 2fr 1fr;
             grid-template-rows: min-content min-content 1fr;
             grid-template-areas:
-                'title image'
+                'title    image'
                 'subtitle image'
                 'features image';
             text-align: left;
@@ -270,4 +270,53 @@ label.error {
 /* CARD */
 .card figure.image {
     padding: 10%;
+}
+
+/* ME */
+.me {
+    background-color: #d5e2e7;
+
+    .me-body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content min-content 1fr min-content;
+        gap: 0px 0px;
+        grid-template-areas:
+            'image'
+            'me-title-1'
+            'me-title-2'
+            'me-title-3';
+
+        .me-title-1 {
+            grid-area: me-title-1;
+        }
+        .me-title-2 {
+            grid-area: me-title-2;
+        }
+        .me-title-3 {
+            grid-area: me-title-3;
+        }
+        .me-image {
+            display: flex;
+            flex-direction: column;
+            grid-area: image;
+
+            & > img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        @media screen and (min-width: $tablet) {
+            grid-template-columns: 1fr 2fr;
+            grid-template-areas:
+                'image me-title-1'
+                'image me-title-2'
+                'image me-title-3';
+        }
+
+        @media screen and (min-width: $desktop) {
+            grid-template-columns: 2fr 3fr;
+        }
+    }
 }
