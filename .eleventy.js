@@ -1,8 +1,6 @@
 const fs = require('fs');
 const htmlmin = require('html-minifier');
 const markdownIt = require('markdown-it');
-const markdownLib = markdownIt({ html: true, typographer: true });
-const md = new markdownIt();
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addWatchTarget('src/scss');
@@ -37,6 +35,7 @@ module.exports = function (eleventyConfig) {
                 useShortDoctype: true,
                 removeComments: true,
                 collapseWhitespace: true,
+                minifyJS: true
             });
             return minified;
         }
