@@ -48,6 +48,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({
         'src/favicon': 'favicon',
         'src/img': 'img',
+        'CNAME': 'CNAME'
     });
 
     return {
