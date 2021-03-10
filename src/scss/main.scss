@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import 'variables.scss';
+@import 'variables';
 
 // Update Bulma's global variables
 $family-sans-serif: 'Raleway', sans-serif;
@@ -32,12 +32,12 @@ $card-header-color: $wheelE;
 
 // @import '../../node_modules/bulma/bulma.sass';
 
-@import 'logo.scss';
-@import 'hero.scss';
-@import 'forms.scss';
-@import 'links.scss';
-@import 'card.scss';
-@import 'me.scss';
+@import 'logo';
+@import 'hero';
+@import 'forms';
+@import 'links';
+@import 'card';
+@import 'me';
 
 html {
     font-size: 87.5%; // 14px
