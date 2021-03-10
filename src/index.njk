@@ -7,14 +7,19 @@ bodyClass: home
 
 <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-        <img
-            src="{{ '/img/zdoroviakod-min.svg' | url }}"
-            alt="{{ metadata.brandName }}"
-        />
+        <a href="{{ '#top' | url }}" title="{{ metadata.brandName }}">
+            <img
+                src="{{ '/img/zdoroviakod-min.svg' | url }}"
+                alt="{{ metadata.brandName }}"
+            />
+        </a>
     </div>
     <ul class="navbar-menu">
         <li>
             <a href="#consultancy" class="navbar-item">Консультации</a>
+        </li>
+        <li>
+            <a href="#me" class="navbar-item">Обо&nbsp;мне</a>
         </li>
         <li>
             <a href="#contacts" class="navbar-item">Контакты</a>
@@ -64,8 +69,8 @@ bodyClass: home
         </div>
     </section>
 </div>
-<section class="services">
-    <h1 id="consultancy">Консультации</h1>
+<section id="consultancy" class="services">
+    <h1>Консультации</h1>
     <div>
         <div>
             {% set tplTitle = metadata.service.bodyFit.name %} {% set tplImg =
@@ -89,7 +94,7 @@ bodyClass: home
         </div>
     </div>
 </section>
-<section class="me">
+<section id="me" class="me">
     <h1>{{ metadata.author }}</h1>
     <div class="me-body content">
         <div class="me-image">
@@ -145,8 +150,8 @@ bodyClass: home
         <p><strong>Стройность без ограничений</strong>!</p>
     </div>
 </section>
-<section class="contacts">
-    <h1 id="contacts">Контакты</h1>
+<section id="contacts" class="contacts">
+    <h1>Контакты</h1>
     <div class="columns">
         <section class="links-container column">
             <div class="links">
