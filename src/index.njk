@@ -264,11 +264,15 @@ bodyClass: home
                         class="textarea"
                     ></textarea>
                 </fieldset>
+                <div class="field privacy">
+                    <input id="privacy" name="privacy" type="checkbox" />
+                    <label class="label" for="privacy">
+                        Отправляя заявку, я&nbsp;даю <a
+                        href="{{ 'privacy' | url }}"
+                        >согласие на&nbsp;обработку персональных данных
+                    </label>
+                </div>
                 <div class="field">
-                    <p class="small">
-                        Отправляя заявку, Вы даете согласие на&nbsp;обработку
-                        персональных данных
-                    </p>
                     <button type="submit" class="button is-primary">
                         Отправить
                     </button>

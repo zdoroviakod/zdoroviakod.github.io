@@ -1,8 +1,8 @@
 {
-    "site_uri": "//zdoroviakod.github.io",
+    "site_uri": "zdoroviakod.life",
     "author": "Алла Танаева",
     "authorProfession": "Врач диетолог-нутрициолог",
-    "brandName": "ZdoroviaKod : «Код Здоровья» Аллы Танаевой", 
+    "brandName": "ZdoroviaKod : «Код Здоровья» Аллы Танаевой",
     "brandDescription": "Индивидуальный коучинг по здоровому питанию, авторская методика Стройность без ограничений, коррекция питания, консультации по питанию онлайн и в Москве",
     "email": "zdoroviakod@gmail.com",
     "whatsapp": "+79875481185",
@@ -13,7 +13,8 @@
         "apiAddres": "https://script.google.com/macros/s/AKfycbyDGUpNrSRpfrd-7By28MaM_pcJifkCBs7pgnZauonYLkp_msG1N-YdUA/exec",
         "valName": "Представьтесь, пожалуйста",
         "valEmail": "Пожалуйста, введите корректный адрес электронной почты",
-        "valPhoneOrEmail": "Без телефона и электронной почты я не смогу вам ответить"
+        "valPhoneOrEmail": "Без телефона и электронной почты я не смогу вам ответить",
+        "valPrivacy": "Вам необходимо дать согласие на обработку персональных данных"
     },
     "service": {
         "bodyFit": {

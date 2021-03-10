@@ -16,7 +16,31 @@ label.error {
     border-bottom-right-radius: 0.5rem;
 }
 
-p.small {
-    font-size: 0.75em;
-    margin-bottom: 0.5rem;
+.privacy {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: min-content min-content;
+    gap: 0px 0px;
+    grid-template-areas:
+        'input label'
+        'error error';
+    margin-bottom: 1rem;
+
+    input {
+        grid-area: input;
+        margin-right: 0.5em;
+    }
+
+    label.label {
+        grid-area: label;
+        font-size: 0.75em;
+
+        a {
+            text-decoration: underline;
+        }
+    }
+
+    label.error {
+        grid-area: error;
+    }
 }
