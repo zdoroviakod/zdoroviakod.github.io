@@ -7,7 +7,7 @@
     <meta name="description" content="{{ description or metadata.brandDescription }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <meta property="og:url" content="{{ page.url }}">
+    <meta property="og:url" content="{{ 'https://' + metadata.site_uri + page.url }}">
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{ title or metadata.brandName }}"/>
     <meta property="og:description" content="{{ metadata.brandDescription }}"/>
