@@ -11,7 +11,7 @@ $widescreen-enabled: false;
 $fullhd-enabled: false;
 
 /* Bulma overrides */
-$body-background-color: #f9f9f9;
+$body-background-color: $bodyBg;
 $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
@@ -67,6 +67,6 @@ a.scroll-top {
     bottom: 0;
     width: 100%;
     padding: 0.25rem;
-    background-color: rgba(103, 138, 184, 0.25);
+    background-color: $linkScrollTop;
     text-align: center;
 }

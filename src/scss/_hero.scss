@@ -1,6 +1,8 @@
+@import 'variables';
+
 /* HERO */
 .has-bg-img {
-    background-color: #d5e2e7;
+    background-color: $wheelA-lightest;
 
     .hero-body {
         padding-top: 2rem !important;
@@ -37,7 +39,7 @@
             li {
                 &:nth-child(1) {
                     & > span {
-                        color: #f24141;
+                        color: $wheelE-accent;
                     }
                 }
 
