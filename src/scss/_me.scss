@@ -1,3 +1,5 @@
+@import 'variables.scss';
+
 /* ME */
 .me {
     background-color: #d5e2e7;
@@ -48,6 +50,20 @@
         @media screen and (min-width: $desktop) {
             grid-template-columns: 2fr 3fr;
             padding: 1rem;
+        }
+    }
+
+    .clients {
+        text-align: center;
+        font-size: 2em;
+    }
+
+    .slogan {
+        text-align: center;
+        font-size: 2em;
+
+        strong {
+            color: $wheelB;
         }
     }
 }

@@ -46,6 +46,12 @@
         grid-template-areas:
             'header content'
             'image content';
+
+        .card-header {
+            h2 {
+                font-size: 1.25em;
+            }
+        }
     }
 
     @media screen and (min-width: $desktop) {
