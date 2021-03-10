@@ -75,3 +75,13 @@ h6 {
     font-weight: 600;
     // color: $wheelE;
 }
+
+a.scroll-top {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 0.25rem;
+    background-color: rgba(103, 138, 184, 0.25);
+    text-align: center;
+}

@@ -1,5 +1,6 @@
 
 <script>
+$(document).ready(function () {
 var successMsg='{{ metadata.contactForm.success | safe }}';var errorMsg='{{ metadata.contactForm.error | safe }}';var apiUrl='{{ metadata.contactForm.apiAddres | safe }}';var form=$('#contact-form');var formOut=$('#contact-form-output');
 $.validator.addMethod('mailOrPhone',function(v,e){return $('#email').val().trim().length > 0 || $('#phone').val().trim().length > 0});
 form.validate({
@@ -8,5 +9,7 @@ messages: { name: {required:'{{metadata.contactForm.valName}}'}, email: {email:'
 submitHandler: ()=>{
 formOut.html("");var data=form.serializeArray().reduce((t,r)=>({...t,[r.name]:r.value}),{});$.ajax({url:apiUrl,method:"POST",dataType:"json",data:data,success:function(t){if("success"==t.result)return form[0].reset(),formOut.html(successMsg),!0;formOut.html(errorMsg+"<br /> result:"+JSON.stringify(t))},error:function(t){formOut.html(errorMsg+"<br /> error:"+JSON.stringify(t))}});
 }
+});
+var scrollTop=$('<a class="scroll-top" href="#top">&uarr;&nbsp;наверх</a>').hide();$('body').append(scrollTop);$(window).scroll(function(){if($(this).scrollTop()>100){scrollTop.fadeIn()}else{scrollTop.fadeOut()}});
 });
 </script>

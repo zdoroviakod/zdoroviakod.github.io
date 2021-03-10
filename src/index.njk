@@ -23,7 +23,7 @@ bodyClass: home
 </nav>
 
 <div class="banner">
-    <section class="hero is-large has-bg-img">
+    <section id="hero" class="hero is-large has-bg-img">
         <div class="hero-body">
             <p class="title">
                 {{ metadata.author }}
@@ -57,6 +57,7 @@ bodyClass: home
                     {{ metadata.service.foodFit.name | safe }}
                 </li>
             </ul>
+            
             <div class="hero-image">
                 <img src="{{ '/img/hero.png' | url }}" />
             </div>
