@@ -2,9 +2,11 @@
 fieldset.field {
     margin-bottom: 1rem;
 }
+
 input:focus.error {
     border-color: $wheelE;
 }
+
 label.error {
     display: block;
     padding: 0.25em;
@@ -12,4 +14,9 @@ label.error {
     background-color: #ffefef;
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
+}
+
+p.small {
+    font-size: 0.75em;
+    margin-bottom: 0.5rem;
 }

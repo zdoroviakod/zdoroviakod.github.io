@@ -67,24 +67,24 @@ bodyClass: home
     <h1 id="consultancy">Консультации</h1>
     <div>
         <div>
-            {% set tplTitle = metadata.service.bodyFit.name %} {% set
-            tplImg = (metadata.service.bodyFit.icon | url) %} {% set tplContent
-            = metadata.service.bodyFit.content  %} {% include "serviceitem.njk" %}
+            {% set tplTitle = metadata.service.bodyFit.name %} {% set tplImg =
+            (metadata.service.bodyFit.icon | url) %} {% set tplContent =
+            metadata.service.bodyFit.content %} {% include "serviceitem.njk" %}
         </div>
         <div>
-            {% set tplTitle = metadata.service.foodLove.name %} {% set
-            tplImg = (metadata.service.foodLove.icon | url) %} {% set tplContent
-            = metadata.service.foodLove.content %} {% include "serviceitem.njk" %}
+            {% set tplTitle = metadata.service.foodLove.name %} {% set tplImg =
+            (metadata.service.foodLove.icon | url) %} {% set tplContent =
+            metadata.service.foodLove.content %} {% include "serviceitem.njk" %}
         </div>
         <div>
-            {% set tplTitle = metadata.service.bodyLove.name %} {% set
-            tplImg = (metadata.service.bodyLove.icon | url) %} {% set tplContent
-            = metadata.service.bodyLove.content %} {% include "serviceitem.njk" %}
+            {% set tplTitle = metadata.service.bodyLove.name %} {% set tplImg =
+            (metadata.service.bodyLove.icon | url) %} {% set tplContent =
+            metadata.service.bodyLove.content %} {% include "serviceitem.njk" %}
         </div>
         <div>
-            {% set tplTitle = metadata.service.foodFit.name %} {% set
-            tplImg = (metadata.service.foodFit.icon | url) %} {% set tplContent
-            = metadata.service.foodFit.content %} {% include "serviceitem.njk" %}
+            {% set tplTitle = metadata.service.foodFit.name %} {% set tplImg =
+            (metadata.service.foodFit.icon | url) %} {% set tplContent =
+            metadata.service.foodFit.content %} {% include "serviceitem.njk" %}
         </div>
     </div>
 </section>
@@ -265,6 +265,10 @@ bodyClass: home
                     ></textarea>
                 </fieldset>
                 <div class="field">
+                    <p class="small">
+                        Отправляя заявку, Вы даете согласие на&nbsp;обработку
+                        персональных данных
+                    </p>
                     <button type="submit" class="button is-primary">
                         Отправить
                     </button>
