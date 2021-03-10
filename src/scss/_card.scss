@@ -23,10 +23,6 @@
 
     .card-content {
         grid-area: content;
-
-        p:not(:last-child) {
-            margin-bottom: 1em;
-        }
     }
 
     figure.image {

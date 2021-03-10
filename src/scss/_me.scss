@@ -28,6 +28,7 @@
             display: flex;
             flex-direction: column;
             grid-area: image;
+            margin-bottom: 1rem;
 
             & > img {
                 max-width: 100%;
