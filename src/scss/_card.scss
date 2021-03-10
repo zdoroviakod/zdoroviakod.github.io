@@ -52,6 +52,10 @@
                 font-size: 1.25em;
             }
         }
+
+        .card-content {
+            padding: 1rem;
+        }
     }
 
     @media screen and (min-width: $desktop) {
