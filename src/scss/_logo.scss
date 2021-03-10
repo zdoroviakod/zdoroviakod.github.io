@@ -1,3 +1,5 @@
+@import 'variables';
+
 /* LOGO */
 nav.navbar {
     display: flex;
@@ -6,6 +8,13 @@ nav.navbar {
     align-items: center;
     flex-wrap: wrap;
     padding: 0.25rem 1rem;
+
+    @media screen and (min-width: $tablet) {
+        position: sticky;
+        top: 0;
+        background-color: white;
+        box-shadow: 0 4px 4px -4px $wheelB;
+    }
 
     @media screen and (min-width: $desktop) {
         padding: 0.25rem 2rem;
