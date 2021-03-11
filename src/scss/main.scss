@@ -52,7 +52,11 @@ body {
     }
 
     & > footer {
-        height: 4rem;
+        height: 8rem;
+
+        @media screen and (min-width: $tablet){
+            height: 0;
+        }
     }
 }
 h1,
