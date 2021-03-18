@@ -1,0 +1,45 @@
+.program {
+    h2 {
+        font-size: 1.5rem;
+        line-height: 1.25em;
+    }
+
+    abbr {
+        text-decoration: none;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            'image'
+            'info';
+
+        @media screen and (min-width: $tablet) {
+            grid-template-columns: 2fr 1fr;
+            grid-template-areas: 'info image';
+
+            .image {
+                margin-left: 2rem;
+                margin-right: 1rem;
+            }
+        }
+
+        .image {
+            grid-area: image;
+        }
+
+        .info {
+            grid-area: info;
+        }
+
+        .info {
+            & > div {
+                padding: 1rem;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

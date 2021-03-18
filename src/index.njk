@@ -19,6 +19,9 @@ bodyClass: home
             <a href="#consultancy" class="navbar-item">Консультации</a>
         </li>
         <li>
+            <a href="#program" class="navbar-item">Программы</a>
+        </li>
+        <li>
             <a href="#me" class="navbar-item">Обо&nbsp;мне</a>
         </li>
         <li>
@@ -91,6 +94,43 @@ bodyClass: home
             {% set tplTitle = metadata.service.foodFit.name %} {% set tplImg =
             (metadata.service.foodFit.icon | url) %} {% set tplContent =
             metadata.service.foodFit.content %} {% include "serviceitem.njk" %}
+        </div>
+    </div>
+</section>
+<section id="program" class="program">
+    <h1>Программы</h1>
+    <div class="container">
+        <div class="image">
+            <img src="{{ '/img/photo/consultancy.jpg' | url }}">
+        </div>
+        <div class="info">
+            <div>
+                <h2>Индивидуальная консультация</h2>
+                <p>Продолжительность одного занятия&nbsp;&mdash; 1&nbsp;час 30&nbsp;минут.</p>
+                <p>Стоимость курса&nbsp;&mdash; 5000&nbsp;<abbr title="рублей">&#x20bd;</abbr>.</p>
+                <p>Проходит онлайн.</p>
+            </div>
+            <div>
+                <h2>Экспресс программа &laquo;Диетолог онлайн&nbsp;24/7&raquo;</h2>
+                <p>Продолжительность одного занятия&nbsp;&mdash; 1&nbsp;час 30&nbsp;минут, или 2&nbsp;занятия по 45&nbsp;минут на&nbsp;выбор.</p>
+                <p>Продолжительность курса&nbsp;&mdash; 2&nbsp;недели.</p>
+                <p>Стоимость одного занятия&nbsp;&mdash; 7000&nbsp;<abbr title="рублей">&#x20bd;</abbr>.</p>
+                <p>После прохождения курса&nbsp;&mdash; скидка на&nbsp;основную программу 6&nbsp;недель 20%.</p>
+            </div>
+            <div>
+                <h2>Индивидуальный коучинг по&nbsp;питанию «Попробуй просто»</h2>
+                <p>Включает 7&nbsp;индивидуальных консультаций по 60&nbsp;минут, онлайн поддержка&nbsp;24/7.</p>
+                <p>Продолжительность курса&nbsp;&mdash; 7&nbsp;недель.</p>
+                <p>Стоимость курса&nbsp;&mdash; 35000&nbsp;<abbr title="рублей">&#x20bd;</abbr>.</p>
+                <p>Бесплатная консультация&nbsp;&mdash; 1&nbsp;час 30&nbsp;минут в&nbsp;течение 2&nbsp;месяцев после окончания курса.</p>
+            </div>
+            <div>
+                <h2>Индивидуально-групповая работа по&nbsp;программе «Попробуй просто»</h2>
+                <p>Включает 3&nbsp;индивидуальные консультации,
+                    5&nbsp;живых вебинаров, 6&nbsp;еженедельных разборов ваших вопросов в&nbsp;чате.</p>
+                <p>Продолжительность курса&nbsp;&mdash; 7&nbsp;недель.</p>
+                <p>Стоимость курса&nbsp;&mdash; 28000&nbsp;<abbr title="рублей">&#x20bd;</abbr>.</p>
+            </div>
         </div>
     </div>
 </section>
