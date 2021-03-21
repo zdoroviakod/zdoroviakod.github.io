@@ -18,8 +18,8 @@ sections:
 - type: document
   path: src/_data/metadata.json
   label: Метаданные
-upload_dir: uploads
-public_path: "/uploads"
+upload_dir: src/img/photo
+public_path: "/src/img/photo"
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
