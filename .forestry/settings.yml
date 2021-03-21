@@ -13,6 +13,12 @@ sections:
 - type: document
   path: src/_data/data.me.json
   label: Обо мне
+- type: heading
+  label: ___
+- type: document
+  path: src/_data/metadata.json
+  label: Метаданные
+  match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
