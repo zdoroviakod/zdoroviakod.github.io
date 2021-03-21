@@ -14,7 +14,7 @@ sections:
   path: src/_data/data.me.json
   label: Обо мне
 - type: heading
-  label: "---"
+  label: данные для поисковиков
 - type: document
   path: src/_data/metadata.json
   label: Метаданные
