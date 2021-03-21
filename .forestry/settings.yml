@@ -5,6 +5,10 @@ admin_path:
 webhook_url: 
 sections:
 - type: document
+  path: _data/data.me.json
+  label: Обо мне
+  match: "**/*"
+- type: document
   path: _data/data.contacts.json
   label: Контакты
 upload_dir: uploads
