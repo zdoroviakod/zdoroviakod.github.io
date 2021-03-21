@@ -5,9 +5,16 @@ admin_path:
 webhook_url: 
 sections:
 - type: document
+  path: _data/data.service.json
+  label: Консультации
+  match: "**/*"
+- type: document
+  path: _data/data.contacts.json
+  label: Контакты
+  match: "**/*"
+- type: document
   path: _data/data.me.json
   label: Обо мне
-  match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
