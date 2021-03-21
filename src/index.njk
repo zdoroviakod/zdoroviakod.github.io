@@ -241,19 +241,19 @@ bodyClass: home
                 <h2>Напишите мне письмо</h2>
                 <div class="link-item">
                     <a
-                        href="mailto:{{ metadata.email | safe }}"
+                        href="mailto:{{ data.contacts.email | safe }}"
                         class="button email"
                     >
                         <span class="icon is-small">
                             <img
                                 alt="Электроная почта {{
-                                    metadata.email | safe
+                                    data.contacts.email | safe
                                 }}"
                                 src="/img/icon_email.svg"
                             />
                         </span>
                         <span>
-                            Почта <strong>{{ metadata.email | safe }}</strong>
+                            Почта <strong>{{ data.contacts.email | safe }}</strong>
                         </span>
                         <span> &rarr; </span>
                     </a>
