@@ -7,13 +7,6 @@ sections:
 - type: document
   path: _data/data.contacts.json
   label: Контакты
-  match: "**/*"
-- type: directory
-  path: _data
-  label: Данные сайта
-  create: documents
-  match: "**/.json"
-  new_doc_ext: json
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
