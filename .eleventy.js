@@ -1,4 +1,5 @@
 const fs = require('fs');
+const htmlEntities = require('html-entities');
 const htmlmin = require('html-minifier');
 const markdownIt = require('markdown-it');
 
@@ -11,6 +12,16 @@ module.exports = function (eleventyConfig) {
         linkify: true,
     });
     eleventyConfig.setLibrary('md', markdownLibrary);
+
+    eleventyConfig.addFilter('striphtml', (str) => {
+        return htmlEntities.decode(`${str.replace(/&nbsp;/g, ' ')}`, {
+            level: 'html5',
+        });
+    });
+
+    eleventyConfig.addFilter('removeSpaces', (str) => {
+        return str.replace(/\s/g, '');
+    });
 
     // Make 404 page work with `eleventy --serve`
     eleventyConfig.setBrowserSyncConfig({
@@ -35,7 +46,7 @@ module.exports = function (eleventyConfig) {
                 useShortDoctype: true,
                 removeComments: true,
                 collapseWhitespace: true,
-                minifyJS: true
+                minifyJS: true,
             });
             return minified;
         }
@@ -47,14 +58,14 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({
         'src/favicon': 'favicon',
         'src/img': 'img',
-        'CNAME': 'CNAME'
+        CNAME: 'CNAME',
     });
 
     return {
         dir: {
             input: 'src',
             output: '_site',
-            data: '_data'
+            data: '_data',
         },
     };
 };

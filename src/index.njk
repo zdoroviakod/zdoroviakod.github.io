@@ -40,32 +40,14 @@ bodyClass: home
                 {{ metadata.authorProfession }}
             </p>
             <ul>
+                {% for service in data.service.services %}
                 <li>
-                    <span
-                        ><img src="{{ metadata.service.bodyFit.icon | url }}"
-                    /></span>
-                    {{ metadata.service.bodyFit.name | safe }}
+                    <span><img src="{{ service.icon | url }}" /></span>
+                    {{ service.name | safe }}
                 </li>
-                <li>
-                    <span
-                        ><img src="{{ metadata.service.foodLove.icon | url }}"
-                    /></span>
-                    {{ metadata.service.foodLove.name | safe }}
-                </li>
-                <li>
-                    <span
-                        ><img src="{{ metadata.service.bodyLove.icon | url }}"
-                    /></span>
-                    {{ metadata.service.bodyLove.name | safe }}
-                </li>
-                <li>
-                    <span
-                        ><img src="{{ metadata.service.foodFit.icon | url }}"
-                    /></span>
-                    {{ metadata.service.foodFit.name | safe }}
-                </li>
+                {% endfor %}
             </ul>
-            
+
             <div class="hero-image">
                 <img src="{{ '/img/hero.png' | url }}" />
             </div>
@@ -75,61 +57,92 @@ bodyClass: home
 <section id="consultancy" class="services">
     <h1>Консультации</h1>
     <div>
+        {% for service in data.service.services %}
         <div>
-            {% set tplTitle = metadata.service.bodyFit.name %} {% set tplImg =
-            (metadata.service.bodyFit.icon | url) %} {% set tplContent =
-            metadata.service.bodyFit.content %} {% include "serviceitem.njk" %}
+            {% set tplTitle = service.name %} {% set tplImg =
+            (service.icon | url) %} {% set tplContent =
+            service.content %} {% include "serviceitem.njk" %}
         </div>
-        <div>
-            {% set tplTitle = metadata.service.foodLove.name %} {% set tplImg =
-            (metadata.service.foodLove.icon | url) %} {% set tplContent =
-            metadata.service.foodLove.content %} {% include "serviceitem.njk" %}
-        </div>
-        <div>
-            {% set tplTitle = metadata.service.bodyLove.name %} {% set tplImg =
-            (metadata.service.bodyLove.icon | url) %} {% set tplContent =
-            metadata.service.bodyLove.content %} {% include "serviceitem.njk" %}
-        </div>
-        <div>
-            {% set tplTitle = metadata.service.foodFit.name %} {% set tplImg =
-            (metadata.service.foodFit.icon | url) %} {% set tplContent =
-            metadata.service.foodFit.content %} {% include "serviceitem.njk" %}
-        </div>
+        {% endfor %}
     </div>
 </section>
 <section id="program" class="program">
     <h1>Программы</h1>
     <div class="container">
         <div class="image">
-            <img src="{{ '/img/photo/consultancy.jpg' | url }}">
+            <img src="{{ '/img/photo/consultancy.jpg' | url }}" />
         </div>
         <div class="info">
             <div>
                 <h2>Индивидуальная консультация</h2>
-                <p>Продолжительность одного занятия&nbsp;&mdash; 1&nbsp;час 30&nbsp;минут.</p>
-                <p>Стоимость курса&nbsp;&mdash; 5000&nbsp;<abbr title="рублей">&#x20bd;</abbr>.</p>
+                <p>
+                    Продолжительность одного занятия&nbsp;&mdash; 1&nbsp;час
+                    30&nbsp;минут.
+                </p>
+                <p>
+                    Стоимость курса&nbsp;&mdash; 5000&nbsp;<abbr title="рублей"
+                        >&#x20bd;</abbr
+                    >.
+                </p>
                 <p>Проходит онлайн.</p>
             </div>
             <div>
-                <h2>Экспресс программа &laquo;Диетолог онлайн&nbsp;24/7&raquo;</h2>
-                <p>Продолжительность одного занятия&nbsp;&mdash; 1&nbsp;час 30&nbsp;минут, или 2&nbsp;занятия по 45&nbsp;минут на&nbsp;выбор.</p>
+                <h2>
+                    Экспресс программа &laquo;Диетолог онлайн&nbsp;24/7&raquo;
+                </h2>
+                <p>
+                    Продолжительность одного занятия&nbsp;&mdash; 1&nbsp;час
+                    30&nbsp;минут, или 2&nbsp;занятия по 45&nbsp;минут
+                    на&nbsp;выбор.
+                </p>
                 <p>Продолжительность курса&nbsp;&mdash; 2&nbsp;недели.</p>
-                <p>Стоимость одного занятия&nbsp;&mdash; 7000&nbsp;<abbr title="рублей">&#x20bd;</abbr>.</p>
-                <p>После прохождения курса&nbsp;&mdash; скидка на&nbsp;основную программу 6&nbsp;недель 20%.</p>
+                <p>
+                    Стоимость одного занятия&nbsp;&mdash; 7000&nbsp;<abbr
+                        title="рублей"
+                        >&#x20bd;</abbr
+                    >.
+                </p>
+                <p>
+                    После прохождения курса&nbsp;&mdash; скидка на&nbsp;основную
+                    программу 6&nbsp;недель 20%.
+                </p>
             </div>
             <div>
-                <h2>Индивидуальный коучинг по&nbsp;питанию «Попробуй просто»</h2>
-                <p>Включает 7&nbsp;индивидуальных консультаций по 60&nbsp;минут, онлайн поддержка&nbsp;24/7.</p>
+                <h2>
+                    Индивидуальный коучинг по&nbsp;питанию «Попробуй просто»
+                </h2>
+                <p>
+                    Включает 7&nbsp;индивидуальных консультаций по
+                    60&nbsp;минут, онлайн поддержка&nbsp;24/7.
+                </p>
                 <p>Продолжительность курса&nbsp;&mdash; 7&nbsp;недель.</p>
-                <p>Стоимость курса&nbsp;&mdash; 35000&nbsp;<abbr title="рублей">&#x20bd;</abbr>.</p>
-                <p>Бесплатная консультация&nbsp;&mdash; 1&nbsp;час 30&nbsp;минут в&nbsp;течение 2&nbsp;месяцев после окончания курса.</p>
+                <p>
+                    Стоимость курса&nbsp;&mdash; 35000&nbsp;<abbr title="рублей"
+                        >&#x20bd;</abbr
+                    >.
+                </p>
+                <p>
+                    Бесплатная консультация&nbsp;&mdash; 1&nbsp;час
+                    30&nbsp;минут в&nbsp;течение 2&nbsp;месяцев после окончания
+                    курса.
+                </p>
             </div>
             <div>
-                <h2>Индивидуально-групповая работа по&nbsp;программе «Попробуй просто»</h2>
-                <p>Включает 3&nbsp;индивидуальные консультации,
-                    5&nbsp;живых вебинаров, 6&nbsp;еженедельных разборов ваших вопросов в&nbsp;чате.</p>
+                <h2>
+                    Индивидуально-групповая работа по&nbsp;программе «Попробуй
+                    просто»
+                </h2>
+                <p>
+                    Включает 3&nbsp;индивидуальные консультации, 5&nbsp;живых
+                    вебинаров, 6&nbsp;еженедельных разборов ваших вопросов
+                    в&nbsp;чате.
+                </p>
                 <p>Продолжительность курса&nbsp;&mdash; 7&nbsp;недель.</p>
-                <p>Стоимость курса&nbsp;&mdash; 28000&nbsp;<abbr title="рублей">&#x20bd;</abbr>.</p>
+                <p>
+                    Стоимость курса&nbsp;&mdash; 28000&nbsp;<abbr title="рублей"
+                        >&#x20bd;</abbr
+                    >.
+                </p>
             </div>
         </div>
     </div>
@@ -138,56 +151,29 @@ bodyClass: home
     <h1>{{ metadata.author }}</h1>
     <div class="me-body content">
         <div class="me-image">
-            <img
-                src="{{ '/img/photo/alla-002.png' | url }}"
-                alt="{{ metadata.author }}"
-            />
+            <img src="{{ data.me.img | url }}" alt="{{ metadata.author }}" />
         </div>
         <div class="me-title-1">
-            <p>Врачебный стаж 21&nbsp;год</p>
-            <p>
-                Работала в&nbsp;области экстренной медицины, педиатрии,
-                инфекционных болезней, гастроэнтерологи, международных
-                медицинских исследований в&nbsp;направлении &laquo;Сахарный
-                диабет&raquo;
-            </p>
-            <p>Практика по&nbsp;диетологии и&nbsp;нутрициологии 4&nbsp;года</p>
+            {{ data.me.section01 | safe }}
         </div>
         <div class="me-title-2">
-            <p>
-                Ведёт индивидуальные
-                <strong>сопровождения по&nbsp;питанию с&nbsp;коррекцией</strong>
-                рациона (снижение веса, поддержка, набор веса), индивидуальный
-                подбор физической нагрузки с&nbsp;учетом состояния здоровья,
-                анализом пищевого дневника, разбором положительных
-                и&nbsp;отрицательных сторон в&nbsp;питании клиента,
-                с&nbsp;последующей коррекцией, советы по&nbsp;рациональному
-                и&nbsp;сбалансированному питанию, простая система изменения
-                пищевых привычек без&nbsp;ограничений и&nbsp;стресса,
-                с&nbsp;учетом индивидуальных вкусовых предпочтений и&nbsp;образа
-                жизни.
-            </p>
+            {{ data.me.section02 | safe }}
         </div>
         <div class="me-title-3">
-            <p>
-                Авторская методика&nbsp;&mdash; индивидуальный коучинг
-                по&nbsp;здоровому питанию &laquo;<strong
-                    >Стройность без&nbsp;ограничений за&nbsp;6 недель</strong
-                >&raquo;, марафон стройности &laquo;Попробуй просто&raquo;.
-            </p>
-            <p>В&nbsp;основе методики:</p>
-            <ol>
-                <li>Психология любви к&nbsp;своему телу</li>
-                <li>Коррекция пищевого поведения</li>
-                <li>Интуитивное питание</li>
-            </ol>
+            {{ data.me.section03 | safe }}
         </div>
     </div>
     <div class="clients">
-        <p>Более 1000 довольных клиентов</p>
+        <p>
+            {{ data.me.clients }}
+        </p>
     </div>
     <div class="slogan">
-        <p><strong>Стройность без ограничений</strong>!</p>
+        <p>
+            <strong>
+                {{ data.me.slogan }}
+            </strong>
+        </p>
     </div>
 </section>
 <section id="contacts" class="contacts">
@@ -205,7 +191,9 @@ bodyClass: home
                             />
                         </span>
                         <span>
-                            Инстаграм instagram.com/<strong>zdoroviakod</strong>
+                            Инстаграм instagram.com/<strong>{{
+                                data.contacts.instagram | safe
+                            }}</strong>
                         </span>
                         <span> &rarr; </span>
                     </a>
@@ -214,15 +202,17 @@ bodyClass: home
                     <a href="https://wa.me/79875481185" class="button">
                         <span class="icon is-small">
                             <img
-                                alt="Ватсапп +79875481185"
+                                alt="Ватсапп {{
+                                    data.contacts.whatsapp
+                                        | striphtml
+                                        | removeSpaces
+                                }}"
                                 src="/img/icon_whatsapp.svg"
                             />
                         </span>
                         <span>
                             Ватсапп
-                            <strong
-                                >+7&nbsp;987&nbsp;548&nbsp;11&nbsp;85</strong
-                            >
+                            <strong>{{ data.contacts.whatsapp | safe }}</strong>
                         </span>
                         <span> &rarr; </span>
                     </a>
@@ -234,25 +224,36 @@ bodyClass: home
                     >
                         <span class="icon is-small">
                             <img
-                                alt="Ватсапп +79875481185"
+                                alt="Фейсбук facebook.com/{{
+                                    data.contacts.facebook | safe
+                                }}"
                                 src="/img/icon_facebook.svg"
                             />
                         </span>
-                        <span> Фейсбук facebook.com/alla.tanaeva </span>
+                        <span>
+                            Фейсбук facebook.com/<strong>{{
+                                data.contacts.facebook | safe
+                            }}</strong>
+                        </span>
                         <span> &rarr; </span>
                     </a>
                 </div>
                 <h2>Напишите мне письмо</h2>
                 <div class="link-item">
-                    <a href="mailto:zdoroviakod@gmail.com" class="button email">
+                    <a
+                        href="mailto:{{ metadata.email | safe }}"
+                        class="button email"
+                    >
                         <span class="icon is-small">
                             <img
-                                alt="Электроная почта zdoroviakod@gmail.com"
+                                alt="Электроная почта {{
+                                    metadata.email | safe
+                                }}"
                                 src="/img/icon_email.svg"
                             />
                         </span>
                         <span>
-                            Почта <strong>zdoroviakod@gmail.com</strong>
+                            Почта <strong>{{ metadata.email | safe }}</strong>
                         </span>
                         <span> &rarr; </span>
                     </a>
@@ -313,9 +314,10 @@ bodyClass: home
                 <div class="field privacy">
                     <input id="privacy" name="privacy" type="checkbox" />
                     <label class="label" for="privacy">
-                        Отправляя заявку, я&nbsp;даю <a
-                        href="{{ 'privacy' | url }}"
-                        >согласие на&nbsp;обработку персональных данных
+                        Отправляя заявку, я&nbsp;даю
+                        <a href="{{ 'privacy' | url }}"
+                            >согласие на&nbsp;обработку персональных данных</a
+                        >
                     </label>
                 </div>
                 <div class="field">

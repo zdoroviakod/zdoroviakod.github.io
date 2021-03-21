@@ -24,6 +24,9 @@
         .me-title-3 {
             grid-area: me-title-3;
         }
+        [class^='me-title'] {
+            margin-bottom: 2rem;
+        }
         .me-image {
             display: flex;
             flex-direction: column;
