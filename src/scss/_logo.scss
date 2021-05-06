@@ -8,6 +8,7 @@ nav.navbar {
     align-items: center;
     flex-wrap: wrap;
     padding: 0.25rem 1rem;
+    z-index: 1;
 
     @media screen and (min-width: $tablet) {
         position: sticky;
