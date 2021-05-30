@@ -7,6 +7,7 @@
         "test": "test"
     },
     "scripts": {
+        "upgrade": "ncu -u && rimraf node_modules && npm install && npm audit fix",
         "watch:sass": "sass --watch src/scss:_site/css",
         "build:sass": "sass --no-source-map src/scss:_site/css --style=compressed",
         "build-local:sass": "sass src/scss:_site/css",
@@ -26,16 +27,18 @@
     },
     "homepage": "https://github.com/zdoroviakod/zdoroviakod.github.io#readme",
     "devDependencies": {
-        "@11ty/eleventy": "^0.11.1",
-        "@11ty/eleventy-img": "^0.3.0",
+        "@11ty/eleventy": "^0.12.1",
+        "@11ty/eleventy-img": "^0.9.0",
         "@creativebulma/bulma-divider": "^1.1.0",
-        "bulma": "^0.9.1",
-        "eslint": "^7.10.0",
-        "html-entities": "^2.1.1",
+        "bulma": "^0.9.2",
+        "eslint": "^7.27.0",
+        "html-entities": "^2.3.2",
         "html-minifier": "^4.0.0",
-        "markdown-it": "^8.4.2",
+        "markdown-it": "^12.0.6",
+        "npm-check-updates": "^11.6.0",
         "npm-run-all": "^4.1.5",
-        "sass": "^1.27.0",
-        "stylelint-config-standard": "^20.0.0"
+        "rimraf": "^3.0.2",
+        "sass": "^1.34.0",
+        "stylelint-config-standard": "^22.0.0"
     }
 }
