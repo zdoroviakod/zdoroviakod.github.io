@@ -1,4 +1,4 @@
-@import 'variables';
+@use 'variables';
 
 /* FORMS */
 fieldset.field {
@@ -6,14 +6,14 @@ fieldset.field {
 }
 
 input:focus.error {
-    border-color: $wheelE;
+    border-color: variables.$wheelE;
 }
 
 label.error {
     display: block;
     padding: 0.25em;
-    color: $wheelE;
-    background-color: $wheelE-lightest;
+    color: variables.$wheelE;
+    background-color: variables.$wheelE-lightest;
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
 }
@@ -48,7 +48,7 @@ label.error {
 }
 
 #contact-form-output {
-    border-color: $wheelE-lightest;
+    border-color: variables.$wheelE-lightest;
     border-radius: 0.375em;
     border-style: solid;
     border-width: 0 0 0 4px;

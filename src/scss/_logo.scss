@@ -1,4 +1,4 @@
-@import 'variables';
+@use 'variables';
 
 /* LOGO */
 nav.navbar {
@@ -14,7 +14,7 @@ nav.navbar {
         position: sticky;
         top: 0;
         background-color: white;
-        box-shadow: 0 4px 4px -4px $wheelB;
+        box-shadow: 0 4px 4px -4px variables.$wheelB;
     }
 
     @media screen and (min-width: $desktop) {
@@ -35,7 +35,7 @@ nav.navbar {
         }
 
         a:hover {
-            border-bottom: 2px solid $wheelD;
+            border-bottom: 2px solid variables.$wheelD;
         }
     }
 

@@ -59,6 +59,8 @@ module.exports = function (eleventyConfig) {
         'src/favicon': 'favicon',
         'src/img': 'img',
         CNAME: 'CNAME',
+        'node_modules/jquery/dist/jquery.min.js': 'js/jquery.min.js',
+        'node_modules/jquery-validation/dist/jquery.validate.min.js': 'js/jquery.validate.min.js',
     });
 
     return {

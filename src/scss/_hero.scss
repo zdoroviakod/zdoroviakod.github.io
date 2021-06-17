@@ -1,8 +1,8 @@
-@import 'variables';
+@use 'variables';
 
 /* HERO */
 .has-bg-img {
-    background-color: $wheelA-lightest;
+    background-color: variables.$wheelA-lightest;
 
     .hero-body {
         padding-top: 2rem !important;
@@ -29,7 +29,7 @@
             line-height: 1em;
             margin-top: 0.5em;
             font-size: 1.7em;
-            color: $wheelE;
+            color: variables.$wheelE;
         }
         ul {
             grid-area: features;
@@ -40,7 +40,7 @@
             li {
                 &:nth-child(1) {
                     & > span {
-                        color: $wheelE-accent;
+                        color: variables.$wheelE-accent;
                     }
                 }
 

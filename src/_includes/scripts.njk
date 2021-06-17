@@ -11,5 +11,6 @@ formOut.html("");var data=form.serializeArray().reduce((t,r)=>({...t,[r.name]:r.
 }
 });
 var scrollTop=$('<a class="scroll-top" href="#top">&uarr;&nbsp;наверх</a>').hide();$('body').append(scrollTop);$(window).scroll(function(){if($(this).scrollTop()>100){scrollTop.fadeIn()}else{scrollTop.fadeOut()}});
+const offset=$('#top>nav').first().outerHeight();$('a[href^="#"]').each(function(_,el){$(el).click((e)=>{e.preventDefault();$('html,body').animate({scrollTop:$(`${$(this).attr('href')}`).offset().top-offset},333)})});
 });
 </script>
