@@ -193,7 +193,7 @@ bodyClass: home
         <section class="links-container column">
             <div class="links">
                 <h2>Напишите мне через социальные медиа</h2>
-                <div class="link-item">
+                <!--<div class="link-item">
                     <a href="https://instagram.com/zdoroviakod" class="button">
                         <span class="icon is-small">
                             <img
@@ -205,6 +205,25 @@ bodyClass: home
                             Инстаграм instagram.com/<strong>{{
                                 data.contacts.instagram | safe
                             }}</strong>
+                        </span>
+                        <span> &rarr; </span>
+                    </a>
+                </div>-->
+                <div class="link-item">
+                    <a href="https://t.me/+t8fsVrHTcjlkNWE6" class="button">
+                        <span class="icon is-small">
+                            <img
+                                alt="Телеграм {{
+                                    data.contacts.telegram
+                                        | striphtml
+                                        | removeSpaces
+                                }}"
+                                src="/img/icon_telegram.svg"
+                            />
+                        </span>
+                        <span>
+                            Телеграм
+                            <strong>{{ data.contacts.telegram | safe }}</strong>
                         </span>
                         <span> &rarr; </span>
                     </a>
@@ -228,7 +247,7 @@ bodyClass: home
                         <span> &rarr; </span>
                     </a>
                 </div>
-                <div class="link-item">
+                <!--<div class="link-item">
                     <a
                         href="https://www.facebook.com/alla.tanaeva"
                         class="button"
@@ -248,7 +267,7 @@ bodyClass: home
                         </span>
                         <span> &rarr; </span>
                     </a>
-                </div>
+                </div>-->
                 <h2>Напишите мне письмо</h2>
                 <div class="link-item">
                     <a
